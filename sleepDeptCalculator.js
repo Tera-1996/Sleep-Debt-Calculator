@@ -1,3 +1,4 @@
+//First we declare the sleep hours per/day in a function
 function getSleepHours(day) {
   switch (day) {
     case "monday":
@@ -24,15 +25,18 @@ function getSleepHours(day) {
   }
 }
 
+//Second, we some the total sleep hours in a week
 const getActualSleepHours = () => 8 + 7 + 6 + 6.5 + 9 + 9.5 + 8.5;
 
-const getIdealSleepHours = idealHours => idealHours * 7;
+//Third, we apply the needed sleep hours multiplied by 7 days a week. You can pass an argument in getIdealSleepHours function call
+const getIdealSleepHours = (idealHours) => idealHours * 7;
 
-
+//The below function calculates the sleeping hours in a week subtracted by the ideal sleep hours a week, to get the perfect amount of sleep
 const calculateSleepDept = () => {
   const actualSleepHours = getActualSleepHours();
   const idealSleepHours = getIdealSleepHours(9);
 
+//Using an if/else... statement to pass the arguments below
   if (actualSleepHours === idealSleepHours) {
     console.log("You got the perfect amount of sleep");
   } else if (actualSleepHours > idealSleepHours) {
@@ -49,7 +53,6 @@ const calculateSleepDept = () => {
     );
   }
 };
+
+//function call
 calculateSleepDept();
-
-
-
